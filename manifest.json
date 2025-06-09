@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Box Autofill Assistant",
+  "version": "1.1",
+  "description": "Auto-fill box size and weight for Pirate Ship, eBay, and Amazon.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["http://localhost:5000/"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.ebay.com/*",
+        "https://*.pirateship.com/*",
+        "https://*.amazon.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
